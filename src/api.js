@@ -8,6 +8,14 @@ export const getArticles = (topic = "") => {
     });
 };
 
+export const getArticleById = (article_id) => {
+  return axios
+    .get(`https://pippas-news-app.herokuapp.com/api/articles/${article_id}`)
+    .then((res) => {
+      return res.data.article;
+    });
+};
+
 export const getTopics = () => {
   return axios
     .get("https://pippas-news-app.herokuapp.com/api/topics")
