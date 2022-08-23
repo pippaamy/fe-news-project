@@ -11,6 +11,9 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        <Route path="/?topic=coding"></Route>
+        <Route path="/?topic=cooking"></Route>
+        <Route path="/?topic=football"></Route>
       </Routes>
     </div>
   );
