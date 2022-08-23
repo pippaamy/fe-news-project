@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getTopics } from "./api";
+import { getTopics } from "../api";
 import { useNavigate } from "react-router";
 
 const Topic = ({ chosenTopic, setChosenTopic }) => {

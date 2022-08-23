@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { getArticles } from "./api";
+import { getArticles } from "../api";
 import Topic from "./Topic";
 
 const Home = () => {
