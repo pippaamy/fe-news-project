@@ -23,3 +23,10 @@ export const getTopics = () => {
       return res.data;
     });
 };
+
+export const patchArticle = (article_id, amount) => {
+  return axios.patch(
+    `https://pippas-news-app.herokuapp.com/api/articles/${article_id}`,
+    { inc_votes: amount }
+  );
+};
