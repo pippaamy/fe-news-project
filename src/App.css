@@ -43,6 +43,14 @@
   padding-left: 0px;
   margin: 0px;
 }
+.dropdown {
+  font-size: 18px;
+  padding: 10px 8px 10px 14px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  position: relative;
+}
 .articles {
   padding: 20px;
   margin: 40px;

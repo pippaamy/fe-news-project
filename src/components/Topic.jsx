@@ -20,7 +20,7 @@ const Topic = ({ chosenTopic, setChosenTopic }) => {
 
   return (
     <div>
-      <select value={chosenTopic} onChange={handleChange}>
+      <select className="dropdown" value={chosenTopic} onChange={handleChange}>
         {topics.map((topics) => {
           return (
             <option key={topics.slug} value={topics.slug}>
