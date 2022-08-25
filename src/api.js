@@ -30,3 +30,13 @@ export const patchArticle = (article_id, amount) => {
     { inc_votes: amount }
   );
 };
+
+export const getCommentsById = (article_id) => {
+  return axios
+    .get(
+      `https://pippas-news-app.herokuapp.com/api/articles/${article_id}/comments`
+    )
+    .then((res) => {
+      return res.data.comments;
+    });
+};

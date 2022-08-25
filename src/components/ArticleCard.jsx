@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getArticleById } from "../api";
+import Comments from "./Comments";
 import Votes from "./Votes";
 
 const ArticleCard = () => {
@@ -22,6 +23,9 @@ const ArticleCard = () => {
       </section>
       <div>
         <Votes article={article} />
+      </div>
+      <div>
+        <Comments />
       </div>
     </div>
   );

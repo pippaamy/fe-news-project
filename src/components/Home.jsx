@@ -18,7 +18,7 @@ const Home = () => {
       <div>
         <Topic setChosenTopic={setChosenTopic} chosenTopic={chosenTopic} />
       </div>
-      <ul>
+      <ul className="list">
         {articles.map((article) => {
           return (
             <Link

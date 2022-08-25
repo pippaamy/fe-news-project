@@ -1,9 +1,11 @@
-const Header = () => {
-  return (
-    <header>
-      <h1>News!</h1>
-    </header>
-  );
-};
+// import dog from "./dog.jpg";
 
-export default Header;
+// const Header = () => {
+//   return (
+//     <header>
+//       <img src={dog} className="dog"></img>
+//     </header>
+//   );
+// };
+
+// export default Header;

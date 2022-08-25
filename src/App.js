@@ -17,7 +17,7 @@ function App() {
     <>
       {loading === false ? (
         <div className="App">
-          <Header />
+          {/* <Header /> */}
           <Navigation />
           <Routes>
             <Route path="/" element={<Home />}></Route>
