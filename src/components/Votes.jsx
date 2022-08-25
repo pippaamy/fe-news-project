@@ -9,6 +9,7 @@ const Votes = ({ article }) => {
       return currentVotes + 1;
     });
     patchArticle(article.article_id, 1).catch(() => {
+      alert("Sorry, something went wrong. Please try again later.");
       setVotes((currentVotes) => {
         return currentVotes - 1;
       });
@@ -19,6 +20,7 @@ const Votes = ({ article }) => {
       return currentVotes - 1;
     });
     patchArticle(article.article_id, -1).catch(() => {
+      alert("Sorry, something went wrong. Please try again later.");
       setVotes((currentVotes) => {
         return currentVotes + 1;
       });
