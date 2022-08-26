@@ -15,22 +15,25 @@ const CommentBox = ({ article }) => {
       username: currentUser.username,
     };
 
-    postComments(id, commentToPost).then((comment) => {
-      setNewComment(comment);
-    });
-    console.log(newComment);
+    postComments(id, commentToPost)
+      .then((comment) => {
+        setNewComment(comment);
+      })
+      .catch(() => {
+        setNewComment({
+          author: currentUser.username,
+          body: "Please try again later!",
+        });
+      });
+
     event.preventDefault();
   };
   return (
     <section>
       <form onSubmit={postComment}>
-        <label htmlFor="newComment">Add a comment!</label>
-        <input
-          className="comment_box"
-          id="newComment"
-          type="text"
-          name="body"
-        ></input>
+        <textarea id="newComment" name="body" rows="6" cols="50">
+          Leave a comment!
+        </textarea>
         <button type="submit">Submit</button>
       </form>
       <div className="new_comment">

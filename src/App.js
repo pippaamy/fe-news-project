@@ -12,10 +12,10 @@ import { UserContext } from "./components/User";
 function App() {
   const [loading, setLoading] = useState(true);
   const [currentUser, setCurrentUser] = useState({
-    username: "CoolDog",
+    username: "tickle122",
+    name: "Tom Tickle",
     avatar_url:
-      "https://images.pexels.com/photos/2607544/pexels-photo-2607544.jpeg?cs=srgb&dl=pexels-simona-kidri%C4%8D-2607544.jpg&fm=jpg",
-    kudos: 15,
+      "https://vignette.wikia.nocookie.net/mrmen/images/d/d6/Mr-Tickle-9a.png/revision/latest?cb=20180127221953",
   });
 
   useEffect(() => {
