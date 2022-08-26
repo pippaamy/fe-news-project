@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import dog from "./dog.jpg";
+import dog from "../images/dog.jpg";
 import { UserContext } from "./User";
 
 const Navigation = () => {

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getArticles } from "../api";
 import Topic from "./Topic";
+import dateFormat from "dateformat";
 
 const Home = () => {
   const [articles, setArticles] = useState([]);
@@ -27,6 +28,7 @@ const Home = () => {
             >
               <li className="articles">
                 <h2>{`${article.title}`}</h2>
+                <p> {dateFormat(article.created_at, "mmmm dS, yyyy")}</p>
                 <p> {`${article.topic}`}</p>
                 <p> {`${article.author}`}</p>
               </li>

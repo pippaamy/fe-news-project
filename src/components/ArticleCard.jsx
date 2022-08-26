@@ -4,6 +4,7 @@ import { getArticleById } from "../api";
 import CommentBox from "./CommentBox";
 import Comments from "./Comments";
 import Votes from "./Votes";
+import dateFormat from "dateformat";
 
 const ArticleCard = () => {
   const { id } = useParams();
@@ -18,6 +19,7 @@ const ArticleCard = () => {
     <div>
       <section className="articles">
         <h1> {article.title}</h1>
+        <p> {dateFormat(article.created_at)}</p>
         <p>{article.body}</p>
         <br />
         <p>{article.author}</p>
