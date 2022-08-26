@@ -3,25 +3,28 @@ import { patchArticle } from "../api";
 
 const Votes = ({ article }) => {
   const [votes, setVotes] = useState(0);
+  const [err, setErr] = useState("");
 
   const upVote = () => {
     setVotes((currentVotes) => {
+      setErr("your vote has been counted!");
       return currentVotes + 1;
     });
     patchArticle(article.article_id, 1).catch(() => {
-      alert("Sorry, something went wrong. Please try again later.");
       setVotes((currentVotes) => {
+        setErr("Something went wrong, please try again later.");
         return currentVotes - 1;
       });
     });
   };
   const downVote = () => {
     setVotes((currentVotes) => {
+      setErr("your vote has been counted!");
       return currentVotes - 1;
     });
     patchArticle(article.article_id, -1).catch(() => {
-      alert("Sorry, something went wrong. Please try again later.");
       setVotes((currentVotes) => {
+        setErr("Something went wrong, please try again later.");
         return currentVotes + 1;
       });
     });
@@ -43,6 +46,7 @@ const Votes = ({ article }) => {
         {" "}
         Vote down{" "}
       </button>
+      <p>{err}</p>
     </div>
   );
 };

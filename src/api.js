@@ -40,3 +40,22 @@ export const getCommentsById = (article_id) => {
       return res.data.comments;
     });
 };
+
+export const getUsers = () => {
+  return axios
+    .get("https://pippas-news-app.herokuapp.com/api/users")
+    .then((res) => {
+      return res.data.users;
+    });
+};
+
+export const postComments = (article_id, comment) => {
+  return axios
+    .post(
+      `https://pippas-news-app.herokuapp.com/api/articles/${article_id}/comments`,
+      comment
+    )
+    .then((res) => {
+      return res.data.comments[0];
+    });
+};

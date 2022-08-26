@@ -9,7 +9,6 @@ const Comments = () => {
 
   useEffect(() => {
     getCommentsById(id).then((comments) => {
-      console.log(id);
       setComments(comments);
     });
   }, [id]);

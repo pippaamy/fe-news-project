@@ -51,6 +51,18 @@
   border-radius: 6px;
   position: relative;
 }
+.username_images {
+  width: 200px;
+}
+
+.comment_box {
+  padding: 70px;
+}
+
+.new_comment {
+  border: 6px green;
+  border-style: dotted;
+}
 .articles {
   padding: 20px;
   margin: 40px;

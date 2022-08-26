@@ -1,4 +1,4 @@
-import logo from "./giphy.webp";
+import logo from "../images/giphy.webp";
 
 const LoadingScreen = () => {
   return (
