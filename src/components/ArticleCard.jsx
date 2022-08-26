@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getArticleById } from "../api";
+import CommentBox from "./CommentBox";
 import Comments from "./Comments";
 import Votes from "./Votes";
 
@@ -25,6 +26,7 @@ const ArticleCard = () => {
         <Votes article={article} />
       </div>
       <div>
+        <CommentBox article={article} />
         <Comments />
       </div>
     </div>
