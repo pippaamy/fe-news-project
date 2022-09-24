@@ -5,7 +5,6 @@ import { UserContext } from "./User";
 
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);
-  console.log(currentUser);
   return (
     <section>
       <nav className="nav">

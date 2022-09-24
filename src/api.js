@@ -1,8 +1,10 @@
 import axios from "axios";
 
-export const getArticles = (topic = "") => {
+export const getArticles = (topic = "", sortby, order) => {
   return axios
-    .get(`https://pippas-news-app.herokuapp.com/api/articles/?topic=${topic}`)
+    .get(
+      `https://pippas-news-app.herokuapp.com/api/articles/?topic=${topic}&sortby=${sortby}&order=${order}`
+    )
     .then((res) => {
       return res.data.articles;
     });
@@ -57,5 +59,15 @@ export const postComments = (article_id, comment) => {
     )
     .then((res) => {
       return res.data.comments[0];
+    });
+};
+
+export const deleteComment = (article_id, comment_id) => {
+  console.log(article_id, comment_id);
+  return axios
+    .delete(`https://pippas-news-app.herokuapp.com/api/comments/${comment_id}`)
+    .then((res) => {
+      console.log(res);
+      return res.data;
     });
 };

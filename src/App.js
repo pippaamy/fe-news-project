@@ -1,5 +1,4 @@
 import "./App.css";
-import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
@@ -25,7 +24,6 @@ function App() {
     <>
       {loading === false ? (
         <div className="App">
-          {/* <Header /> */}
           <UserContext.Provider value={{ currentUser, setCurrentUser }}>
             <Navigation />
             <Routes>

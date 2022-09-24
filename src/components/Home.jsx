@@ -3,21 +3,25 @@ import { Link } from "react-router-dom";
 import { getArticles } from "../api";
 import Topic from "./Topic";
 import dateFormat from "dateformat";
+import Sorting from "./Sorting";
 
 const Home = () => {
   const [articles, setArticles] = useState([]);
   const [chosenTopic, setChosenTopic] = useState("");
+  const [sort, setSort] = useState("created_at");
+  const [ord, setOrd] = useState("ASC");
 
   useEffect(() => {
-    getArticles(chosenTopic).then((articles) => {
+    getArticles(chosenTopic, sort, ord).then((articles) => {
       setArticles(articles);
     });
-  }, [chosenTopic]);
+  }, [chosenTopic, sort, ord]);
 
   return (
     <section>
       <div>
         <Topic setChosenTopic={setChosenTopic} chosenTopic={chosenTopic} />
+        <Sorting sort={sort} setSort={setSort} ord={ord} setOrd={setOrd} />
       </div>
       <ul className="list">
         {articles.map((article) => {

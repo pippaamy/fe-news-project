@@ -36,6 +36,9 @@
   list-style: none;
 }
 
+.currentUser_text {
+  font-size: medium;
+}
 .dog {
   width: 200px;
 }
@@ -45,16 +48,18 @@
 }
 .dropdown {
   font-size: 18px;
-  padding: 10px 8px 10px 14px;
+  padding: 10px;
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 6px;
   position: relative;
 }
 .username_images {
-  width: 200px;
+  width: 100px;
 }
-
+.user_header {
+  font-size: small;
+}
 .comment_box {
   padding: 70px;
 }
@@ -70,6 +75,23 @@
   border: 6px #668ba4;
   border-style: double;
   list-style: none;
+}
+.sortby {
+  font-size: 18px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  position: relative;
+}
+
+.order {
+  font-size: 18px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  position: relative;
 }
 @keyframes App-logo-spin {
   from {
