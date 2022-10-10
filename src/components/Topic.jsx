@@ -21,11 +21,11 @@ const Topic = ({ chosenTopic, setChosenTopic }) => {
   return (
     <div>
       <select className="dropdown" value={chosenTopic} onChange={handleChange}>
+        <option value="">ALL</option>
         {topics.map((topics) => {
           return (
             <option key={topics.slug} value={topics.slug}>
-              {" "}
-              {topics.slug}{" "}
+              {topics.slug.toUpperCase()}
             </option>
           );
         })}

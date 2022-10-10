@@ -17,15 +17,15 @@ const Sorting = ({ setSort, sort, ord, setOrd }) => {
   return (
     <div>
       <select className="sortby" value={sort} onChange={handleChange}>
-        <option>author</option>
-        {/* <option>created_at</option> */}
-        <option>title</option>
+        <option value="author">Author</option>
+        <option value="created_at">Date</option>
+        <option value="title">Title</option>
         {/* <option>comment_count</option> */}
-        <option>votes</option>
+        <option value="votes">Votes</option>
       </select>
       <select className="order" value={ord} onChange={handleOrder}>
-        <option>ASC</option>
-        <option>DESC</option>
+        <option value="ASC">Ascending</option>
+        <option value="DESC">Descending</option>
       </select>
     </div>
   );

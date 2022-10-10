@@ -38,7 +38,7 @@ const Comments = () => {
             <li className="comment">
               <h3>{`Author: ${comment.author}`}</h3>
               <p> {`${comment.body}`}</p>
-              <p> {`Votes: ${comment.votes}`}</p>
+              {/* <p> {`Votes: ${comment.votes}`}</p> */}
               <button id={comment.comment_id} onClick={handleClick(comment)}>
                 Delete
               </button>
