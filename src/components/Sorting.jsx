@@ -18,7 +18,7 @@ const Sorting = ({ setSort, sort, ord, setOrd }) => {
     <div>
       <select className="sortby" value={sort} onChange={handleChange}>
         <option>author</option>
-        <option>created_at</option>
+        {/* <option>created_at</option> */}
         <option>title</option>
         {/* <option>comment_count</option> */}
         <option>votes</option>
