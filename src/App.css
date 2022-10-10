@@ -85,6 +85,15 @@
   position: relative;
 }
 
+.user {
+  padding: 20px;
+  margin: 40px;
+  color: black;
+  border: 6px #668ba4;
+  border-style: double;
+  list-style: none;
+}
+
 .order {
   font-size: 18px;
   padding: 10px;

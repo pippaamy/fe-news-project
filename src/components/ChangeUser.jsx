@@ -14,7 +14,7 @@ const ChangeUser = () => {
 
   return (
     <section>
-      <ul>
+      <ul className="user">
         {users.map((user) => {
           return (
             <li>
