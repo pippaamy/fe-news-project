@@ -1,11 +1,15 @@
+import { useContext } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { deleteComment, getCommentsById } from "../api";
+import { UserContext } from "./User";
 
 const Comments = () => {
   const [comments, setComments] = useState([]);
   const { id } = useParams();
+  const { currentUser } = useContext(UserContext);
+  console.log(currentUser);
 
   const refreshPage = () => {
     window.parent.location = window.parent.location.href;
@@ -39,9 +43,11 @@ const Comments = () => {
               <h3>{`Author: ${comment.author}`}</h3>
               <p> {`${comment.body}`}</p>
               {/* <p> {`Votes: ${comment.votes}`}</p> */}
-              <button id={comment.comment_id} onClick={handleClick(comment)}>
-                Delete
-              </button>
+              {currentUser.username === comment.author && (
+                <button id={comment.comment_id} onClick={handleClick(comment)}>
+                  Delete
+                </button>
+              )}
             </li>
           );
         })}

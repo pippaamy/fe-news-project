@@ -19,7 +19,7 @@ const ArticleCard = () => {
     <div>
       <section className="articles">
         <h1> {article.title}</h1>
-        <p> {dateFormat(article.created_at)}</p>
+        <p> {dateFormat(article.created_at, "mmmm dS, yyyy")}</p>
         <p>{article.body}</p>
         <br />
         <p>{article.author}</p>
